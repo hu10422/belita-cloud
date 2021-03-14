@@ -1,0 +1,20 @@
+#公共配置
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  #激活哪一个环境的配置文件
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://mysql.lc:3306/belita?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: belita
+    password: CnkGzYxJkeCn2ns7
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#  spring.datasource.url=
+#  spring.datasource.username=root
+#  spring.datasource.password=123456
+#  spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
