@@ -1,0 +1,8 @@
+GET {{baseUrl}}echo/2021
+Accept: application/json
+
+###
+
+GET {{baseUrl}}web/order/findAll
+Accept: application/json
+

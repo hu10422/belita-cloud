@@ -1,26 +1,19 @@
 #公共配置
 server:
-  port: 8081
+  port: 80
   tomcat:
     uri-encoding: UTF-8
 
-
 spring:
   application:
-    name: service-provider-order
-  cloud:
+    name: service-consumer
+  cloud: #nacos 地址配置
     nacos:
       discovery:
         server-addr: nacos.lc:8848
-        service: order
   #激活哪一个环境的配置文件
   profiles:
     active: dev
-  datasource:
-    url: jdbc:mysql://mysql.lc:3306/belita?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: belita
-    password: CnkGzYxJkeCn2ns7
-    driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     #日期格式化
     date-format: yyyy-MM-dd HH:mm:ss
@@ -41,4 +34,5 @@ spring:
       #允许出现单引号
       allow_single_quotes: true
 
-debug: on
+
+
