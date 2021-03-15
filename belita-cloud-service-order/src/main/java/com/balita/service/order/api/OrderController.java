@@ -3,6 +3,7 @@ package com.balita.service.order.api;
 import cn.hutool.core.date.TimeInterval;
 import com.balita.service.order.entity.Order;
 import com.balita.service.order.service.OrderService;
+import com.beilita.common.result.JsonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,12 +22,12 @@ public class OrderController {
 
 
     @GetMapping("/findAll")
-    public List<Order> findAll() {
+    public JsonResult findAll() {
         TimeInterval interval = new TimeInterval();
 
         List<Order> all = orderService.findAll();
         log.info("查询所有订单,耗时[{}]毫秒", interval.interval());
-        return all;
+        return JsonResult.success(all);
     }
 
 
