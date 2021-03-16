@@ -1,6 +1,8 @@
 package com.beilita.common.result;
 
-public class JsonResult<T> {
+import java.io.Serializable;
+
+public class JsonResult<T> implements Serializable {
 
 
     private T data;

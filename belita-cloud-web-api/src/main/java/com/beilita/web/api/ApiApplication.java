@@ -18,21 +18,4 @@ public class ApiApplication {
         SpringApplication.run(ApiApplication.class);
     }
 
-    @RestController
-    public class TestController {
-
-//        private final RestTemplate restTemplate;
-//
-//        @Autowired
-//        public TestController(RestTemplate restTemplate) {
-//            this.restTemplate = restTemplate;
-//        }
-        @Autowired
-        private RestTemplate restTemplate;
-
-        @RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
-        public String echo(@PathVariable String str) {
-            return restTemplate.getForObject("http://order/echo/" + str, String.class);
-        }
-    }
 }

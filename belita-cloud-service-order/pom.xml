@@ -15,6 +15,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <nacos.version>2.2.5.RELEASE</nacos.version>
     </properties>
 
     <dependencies>
@@ -38,7 +39,13 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-            <version>2.2.5.RELEASE</version>
+            <version>${nacos.version}</version>
+        </dependency>
+        <!-- Nacos 配置中心 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <version>${nacos.version}</version>
         </dependency>
 
         <!-- 引入jdbc支持 -->
@@ -60,4 +67,6 @@
 
 
     </dependencies>
+
+
 </project>
