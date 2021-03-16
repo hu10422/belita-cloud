@@ -1,4 +1,4 @@
-package com.beilita.web.api.controller;
+package com.belita.web.feign.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,14 +11,13 @@ import org.springframework.web.client.RestTemplate;
 public class TestController {
 
 
-    //        private final RestTemplate restTemplate;
-//
-//        @Autowired
-//        public TestController(RestTemplate restTemplate) {
-//            this.restTemplate = restTemplate;
-//        }
+    private final RestTemplate restTemplate;
+
     @Autowired
-    private RestTemplate restTemplate;
+    public TestController(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
 
     @RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
     public String echo(@PathVariable String str) {

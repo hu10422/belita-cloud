@@ -23,4 +23,10 @@ public class OrderServiceImpl implements OrderService {
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Order>(Order.class));
         //(sql, new Object[]{}, new BeanPropertyRowMapper<Order>(Order.class));
     }
+
+    @Override
+    public Order findInfo(Long id) {
+        String sql = "select * from tb_order where id = ?";
+        return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<Order>(Order.class), id);
+    }
 }

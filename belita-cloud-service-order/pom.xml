@@ -10,19 +10,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>belita-cloud-service-order</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <nacos.version>2.2.5.RELEASE</nacos.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.belita.common</groupId>
             <artifactId>belita-cloud-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -31,21 +28,14 @@
         </dependency>
 
         <!-- Nacos 注册发现 -->
-        <!--<dependency>
-            <groupId>com.alibaba.boot</groupId>
-            <artifactId>nacos-discovery-spring-boot-starter</artifactId>
-            <version>0.2.4</version>
-        </dependency>-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-            <version>${nacos.version}</version>
         </dependency>
         <!-- Nacos 配置中心 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>${nacos.version}</version>
         </dependency>
 
         <!-- 引入jdbc支持 -->
@@ -54,11 +44,7 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <!-- 连接MySQL数据库 -->
-        <!--<dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.46</version>
-        </dependency>-->
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

@@ -6,3 +6,14 @@ Accept: application/json
 GET {{baseUrl}}web/order/findAll
 Accept: application/json
 
+
+
+###
+GET {{baseUrl}}web/order/findInfo?id=1
+Accept: application/json
+
+
+###
+GET {{baseUrl}}feign/fingInfo?id=1
+Accept: application/json
+

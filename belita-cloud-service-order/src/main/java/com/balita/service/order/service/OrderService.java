@@ -11,4 +11,6 @@ public interface OrderService {
      * @return
      */
     List<Order> findAll();
+
+    Order findInfo(Long id);
 }

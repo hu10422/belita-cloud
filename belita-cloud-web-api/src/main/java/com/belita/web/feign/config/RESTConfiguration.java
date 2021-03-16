@@ -1,4 +1,4 @@
-package com.beilita.web.api.config;
+package com.belita.web.feign.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
