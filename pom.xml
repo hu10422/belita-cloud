@@ -22,9 +22,9 @@
     </properties>
 
     <modules>
-        <module>belita-cloud-web-api</module>
         <module>belita-cloud-common</module>
         <module>belita-cloud-service-order</module>
+        <module>belita-cloud-web-api</module>
         <module>belita-cloud-web-feign</module>
     </modules>
 
@@ -63,25 +63,30 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!--<plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
-            </plugin>-->
+            <!-- <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
+                 <configuration>
+                     <source>${java.version}</source>
+                     <target>${java.version}</target>
+                     <encoding>${project.build.sourceEncoding}</encoding>
+                     <excludes>
+                         <exclude>
+                             <groupId>org.projectlombok</groupId>
+                             <artifactId>lombok</artifactId>
+                         </exclude>
+                     </excludes>
+                 </configuration>
+             </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

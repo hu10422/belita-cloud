@@ -15,12 +15,14 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <nacos.version>2.2.5.RELEASE</nacos.version>
+        <sys.version>0.0.1-SNAPSHOT</sys.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.belita.common</groupId>
             <artifactId>belita-cloud-common</artifactId>
+            <version>${sys.version}</version>
         </dependency>
 
         <dependency>
@@ -32,14 +34,12 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-            <version>${nacos.version}</version>
         </dependency>
 
         <!-- Nacos 配置中心 -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-            <version>${nacos.version}</version>
         </dependency>
 
         <dependency>
@@ -49,5 +49,22 @@
 
 
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

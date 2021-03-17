@@ -15,12 +15,14 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <nacos.version>2.2.5.RELEASE</nacos.version>
+        <sys.version>0.0.1-SNAPSHOT</sys.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.belita.common</groupId>
             <artifactId>belita-cloud-common</artifactId>
+            <version>${sys.version}</version>
         </dependency>
 
         <dependency>

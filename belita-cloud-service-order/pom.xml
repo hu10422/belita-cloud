@@ -14,12 +14,14 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <sys.version>0.0.1-SNAPSHOT</sys.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.belita.common</groupId>
             <artifactId>belita-cloud-common</artifactId>
+            <version>${sys.version}</version>
         </dependency>
 
         <dependency>
@@ -44,7 +46,6 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
         <!-- 连接MySQL数据库 -->
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -53,6 +54,23 @@
 
 
     </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
