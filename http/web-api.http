@@ -14,6 +14,9 @@ Accept: application/json
 
 
 ###
-GET {{baseUrl}}feign/fingInfo?id=1
+GET {{baseUrl}}feign/findInfo?id=1
 Accept: application/json
 
+###
+GET {{baseUrl}}feign/findAll?id=1
+Accept: application/json

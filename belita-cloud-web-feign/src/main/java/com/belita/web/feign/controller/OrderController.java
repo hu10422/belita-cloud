@@ -17,12 +17,25 @@ public class OrderController {
     @Autowired
     private OrderClient orderClient;
 
+//    @Autowired
+//    private UserClient userClient;
 
-    @GetMapping("feign/fingInfo")
-    public JsonResult fingInfo(Long id) {
+
+
+    @GetMapping("feign/findInfo")
+    public JsonResult findInfo(Long id) {
         TimeInterval interval = new TimeInterval();
         Map info = orderClient.findInfo(id);
         log.info("查询数据，耗时{}毫秒", interval.interval());
         return JsonResult.success(info);
     }
+
+
+//    @GetMapping("feign/findAll")
+//    public JsonResult findAll(Long id) {
+//        TimeInterval interval = new TimeInterval();
+//        Map info = userClient.findInfo(id);
+//        log.info("查询数据，耗时{}毫秒", interval.interval());
+//        return JsonResult.success(info);
+//    }
 }

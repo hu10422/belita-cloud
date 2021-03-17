@@ -19,6 +19,12 @@ public interface OrderClient {
     如果我们是Get请求，但是又有复合类型怎么办？ 比如我们想传递一个User对象。User对象里面只有普通的两个String属性。 这里我们可以使用@SpringQueryMap：
     注意：@SpringQueryMap后面的参数只能是普通的POJO，不能是复合类型，否则解析不了。如果必须使用复合类型，那么使用@RequestBody吧。
     */
+
+    /**
+     * {@literal https://zhuanlan.zhihu.com/p/133378040}
+     * @param id
+     * @return
+     */
     @GetMapping("/api/order/findInfo")
     Map findInfo(@RequestParam("id") Long id);
 }
