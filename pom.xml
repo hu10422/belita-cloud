@@ -25,7 +25,6 @@
         <module>belita-cloud-common</module>
         <module>belita-cloud-service-order</module>
         <module>belita-cloud-web-api</module>
-        <module>belita-cloud-web-feign</module>
     </modules>
 
 

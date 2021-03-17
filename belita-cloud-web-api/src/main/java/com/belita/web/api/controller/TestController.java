@@ -1,4 +1,4 @@
-package com.belita.web.feign.controller;
+package com.belita.web.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,4 +23,5 @@ public class TestController {
     public String echo(@PathVariable String str) {
         return restTemplate.getForObject("http://order/echo/" + str, String.class);
     }
+
 }
