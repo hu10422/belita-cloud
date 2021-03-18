@@ -24,4 +24,7 @@ public class TestController {
         return restTemplate.getForObject("http://order/echo/" + str, String.class);
     }
 
+
+
+
 }

@@ -5,9 +5,21 @@ spring:
   application:
     name: balita-gateway
   cloud:
-    gateway:
-      routes:
-        - id: order-index
-          uri: http://127.0.0.1:81
-          predicates:
-            - Path=/**
+    nacos:
+      config:
+        enabled: true
+        server-addr: nacos.lc:8848
+        namespace: ${spring.profiles.active}
+        file-extension: yaml
+      discovery:
+        server-addr: nacos.lc:8848
+        namespace: ${spring.profiles.active}
+      username: nacos
+      password: nacos
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: order-index
+#          uri: http://127.0.0.1:81
+#          predicates:
+#            - Path=/**
