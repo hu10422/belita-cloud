@@ -18,10 +18,14 @@
     </properties>
 
     <dependencies>
-        <dependency>
+        <!-- <dependency>
             <groupId>com.belita.common</groupId>
             <artifactId>belita-cloud-common</artifactId>
             <version>${sys.version}</version>
+        </dependency>-->
+        <dependency>
+            <groupId>com.belita</groupId>
+            <artifactId>belita-cloud-common</artifactId>
         </dependency>
 
         <dependency>

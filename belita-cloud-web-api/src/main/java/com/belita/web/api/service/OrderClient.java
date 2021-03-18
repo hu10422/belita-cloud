@@ -1,6 +1,7 @@
 package com.belita.web.api.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -27,4 +28,7 @@ public interface OrderClient {
     //这里跟提供者接口的URL一致
     @RequestMapping("/api/order/findInfo")
     Map findInfo(@RequestParam("id") Long id);
+
+    @GetMapping("/index")
+    String index();
 }

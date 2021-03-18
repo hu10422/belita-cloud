@@ -10,8 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>belita-cloud-common</artifactId>
-    <groupId>com.belita.common</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <!-- <groupId>com.belita.common</groupId>
+     <version>0.0.1-SNAPSHOT</version>-->
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

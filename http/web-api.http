@@ -1,3 +1,7 @@
+GET {{baseUrl}}/index
+Accept: application/json
+
+###
 GET {{baseUrl}}echo/2021
 Accept: application/json
 
