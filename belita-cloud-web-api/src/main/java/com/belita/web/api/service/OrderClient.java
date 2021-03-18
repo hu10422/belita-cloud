@@ -1,18 +1,18 @@
-package com.belita.web.feign.service;
+package com.belita.web.api.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.cloud.openfeign.SpringQueryMap;
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
-@Component
-@FeignClient(name = "order-server")
+//会扫描指定包下，标记FeignClient注解的接口
+//会根据服务名，从注册中心找到对应的IP地址
+@FeignClient(name="order-server")
 public interface OrderClient {
 
-
-   /* 一般我们会使用@GetMapping和@PostMapping两种方式来调用Rest服务。
+    /* 一般我们会使用@GetMapping和@PostMapping两种方式来调用Rest服务。
     而接收的参数则会使用@RequestParam和@RequestBody来获取。
     首先我们讲一下@RequestBody，@RequestBody只能用在Post请求，并且一个Post请求只能有一个@RequestBody。 @RequestBody的参数可以包括复杂类型。
     然后我们讲一下@RequestParam，@RequestParam可以用在Post和Get请求中，但是要注意：@RequestParam 的参数只能是基本类型或者Enum，或者List和Map（List和Map里面也只能是基本类型）。所以@RequestParam可以和@RequestBody一起使用。
@@ -25,6 +25,10 @@ public interface OrderClient {
      * @param id
      * @return
      */
-    @GetMapping("/api/order/findInfo")
+    //这里跟提供者接口的URL一致
+    @RequestMapping("/api/order/findInfo")
     Map findInfo(@RequestParam("id") Long id);
+
+    @GetMapping("/index")
+    String index();
 }

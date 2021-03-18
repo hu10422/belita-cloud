@@ -1,3 +1,7 @@
+GET {{baseUrl}}/index
+Accept: application/json
+
+###
 GET {{baseUrl}}echo/2021
 Accept: application/json
 
@@ -14,7 +18,7 @@ Accept: application/json
 
 
 ###
-GET {{baseUrl}}feign/findInfo?id=1
+GET {{baseUrl}}web/order/findInfo?id=1
 Accept: application/json
 
 ###

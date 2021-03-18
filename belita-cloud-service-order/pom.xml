@@ -18,10 +18,14 @@
     </properties>
 
     <dependencies>
-        <dependency>
+        <!-- <dependency>
             <groupId>com.belita.common</groupId>
             <artifactId>belita-cloud-common</artifactId>
             <version>${sys.version}</version>
+        </dependency>-->
+        <dependency>
+            <groupId>com.belita</groupId>
+            <artifactId>belita-cloud-common</artifactId>
         </dependency>
 
         <dependency>
@@ -38,6 +42,12 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- sentinel -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
 
         <!-- 引入jdbc支持 -->

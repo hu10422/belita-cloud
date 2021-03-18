@@ -1,4 +1,4 @@
-package com.belita.web.feign;
+package com.belita.web.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,10 +7,12 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = {"com.belita.web.feign.service"})
-public class OrderFeignApplication {
+//开启feign接口扫描，指定扫描的包
+@EnableFeignClients(basePackages = {"com.belita.web.api.service"})
+public class OrderApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderFeignApplication.class);
+        SpringApplication.run(OrderApiApplication.class);
     }
+
 }
