@@ -2,3 +2,14 @@ GET {{baseUrl}}api/order/findAll
 Accept: application/json
 
 ###
+GET {{baseUrl}}index
+
+###
+
+GET {{baseUrl}}forGet
+
+###
+
+GET {{baseUrl}}forError
+
+###

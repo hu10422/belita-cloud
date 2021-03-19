@@ -24,3 +24,12 @@ Accept: application/json
 ###
 GET {{baseUrl}}feign/findAll?id=1
 Accept: application/json
+
+
+### 81
+GET {{baseUrl}}index
+
+
+### 80 gateway
+GET {{baseUrl}}api/index
+

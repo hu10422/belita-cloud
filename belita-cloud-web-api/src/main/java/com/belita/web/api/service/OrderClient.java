@@ -1,5 +1,6 @@
 package com.belita.web.api.service;
 
+import com.belita.web.api.factory.OrderFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,7 +10,7 @@ import java.util.Map;
 
 //会扫描指定包下，标记FeignClient注解的接口
 //会根据服务名，从注册中心找到对应的IP地址
-@FeignClient(name="order-server")
+@FeignClient(name = "order-server", fallbackFactory = OrderFallbackFactory.class)
 public interface OrderClient {
 
     /* 一般我们会使用@GetMapping和@PostMapping两种方式来调用Rest服务。
@@ -22,6 +23,7 @@ public interface OrderClient {
 
     /**
      * {@literal https://zhuanlan.zhihu.com/p/133378040}
+     *
      * @param id
      * @return
      */

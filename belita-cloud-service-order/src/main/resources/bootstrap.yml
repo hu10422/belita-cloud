@@ -1,8 +1,8 @@
 spring:
   application:
     name: order-server
-#  profiles:
-#    active: dev
+  profiles:
+    active: dev
   cloud:
     nacos:
       config:
@@ -15,5 +15,20 @@ spring:
         namespace: ${spring.profiles.active}
       username: nacos
       password: nacos
+    sentinel:
+      transport:
+        port: ${server.port}
+        dashboard: localhost:8080
+#      eager: true
+      datasource: #  添加Nacos数据源配置
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            namespace: ${spring.profiles.active}
+            dataId: ${spring.application.name}-sentinel
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
 
 #debug: on
