@@ -27,12 +27,21 @@ public class ApiOrderController {
     @GetMapping("/findAll")
     public JsonResult findAll(){
         List forObject = restTemplate.getForObject("http://order-server/api/order/findAll", List.class);
+
         return JsonResult.success(forObject);
+    }
+
+    @GetMapping("/index")
+    public JsonResult index() {
+        return JsonResult.success(orderClient.index());
     }
 
     @GetMapping("/findInfo")
     public JsonResult findInfo(Long id){
         Map map = orderClient.findInfo(id);
+        if (map == null || map.isEmpty()) {
+            throw new RuntimeException("没有查到ID的数据");
+        }
         return JsonResult.success(map);
     }
 

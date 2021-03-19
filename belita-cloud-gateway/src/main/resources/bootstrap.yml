@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: balita-gateway
+  profiles:
+    active: dev
   cloud:
     nacos:
       config:

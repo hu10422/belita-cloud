@@ -10,6 +10,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+/**
+ * 消费者通过openFeign调用
+ */
 @Slf4j
 @Service
 public class OrderServiceImpl implements OrderService {
