@@ -1,7 +1,6 @@
 package com.belita.web.api.handler;
 
 
-import cn.hutool.core.util.StrUtil;
 import com.beilita.common.result.JsonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.ClassUtils;
@@ -24,6 +23,6 @@ public class GlobalExceptionHandler {
 
         e.printStackTrace();
 
-        return JsonResult.error(StrUtil.format("统一异常处理【{}】", exceptionName));
+        return JsonResult.error("统一异常处理:" + exceptionName);
     }
 }

@@ -1,8 +1,8 @@
 package com.balita.service.order.api;
 
-import cn.hutool.core.date.TimeInterval;
 import com.balita.service.order.entity.Order;
 import com.balita.service.order.service.OrderService;
+import com.beilita.common.util.TimeInterval;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
