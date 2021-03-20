@@ -1,0 +1,26 @@
+#公共配置
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      indent_output: true
+      fail_on_empty_beans: false
+    defaultPropertyInclusion: NON_EMPTY
+    deserialization:
+      fail_on_unknown_properties: false
+    parser:
+      allow_unquoted_control_chars: true
+      allow_single_quotes: true
+
+
+
+feign:
+  sentinel:
+    enabled: true # 激活Sentinel对Feign的支持
+
+
