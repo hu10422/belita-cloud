@@ -1,0 +1,27 @@
+#公共配置
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      indent_output: true
+      fail_on_empty_beans: false
+    defaultPropertyInclusion: NON_EMPTY
+    deserialization:
+      fail_on_unknown_properties: false
+    parser:
+      allow_unquoted_control_chars: true
+      allow_single_quotes: true
+  cloud:
+    gateway:
+      routes:
+        - id: order-web
+          uri: http://127.0.0.1:81
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*), /$\{segment}
