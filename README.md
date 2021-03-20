@@ -8,9 +8,9 @@
    
 
 ---
-#### 2021年3月20日 17点19分
+#### 2021年3月16日 17点19分
 
-- 创建项目确定版本（ps: [版本说明Wiki](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E)）
+- 创建项目确定版本（ps: [版本说明WIKI](https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E)）
 
 #### 2021年3月20日 17点27分
 
