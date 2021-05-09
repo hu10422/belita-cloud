@@ -28,7 +28,7 @@
         <module>belita-cloud-gateway</module>
         <module>dubbo-server-order</module>
         <module>dubbo-client-order</module>
-        <module>dubbon-facade</module>
+        <module>dubbo-facade</module>
     </modules>
 
 

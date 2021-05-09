@@ -24,7 +24,7 @@
 
         <dependency>
             <groupId>com.belita</groupId>
-            <artifactId>dubbon-facade</artifactId>
+            <artifactId>dubbo-facade</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
