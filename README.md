@@ -23,3 +23,7 @@
 - 整合gateway，仅使用路由转发
 - ~~gateway整合sentinel~~
 
+
+#### 2021年5月10日
+
+- 整合Dubbo
