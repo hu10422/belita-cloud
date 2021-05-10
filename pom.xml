@@ -29,6 +29,7 @@
         <module>dubbo-server-order</module>
         <module>dubbo-client-order</module>
         <module>dubbo-facade</module>
+        <module>dubbo-server</module>
     </modules>
 
 
