@@ -17,6 +17,15 @@
     </properties>
 
     <dependencies>
+        <!-- devtools热部署依赖 -->
+        <!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            &lt;!&ndash; 防止将依赖传递到其他模块中 &ndash;&gt;
+            <optional>true</optional>
+            &lt;!&ndash; 只在运行时起作用，打包时不打进去（防止线上执行打包后的程序，启动文件监听线程File Watcher，耗费大量的内存资源） &ndash;&gt;
+            <scope>runtime</scope>
+        </dependency>-->
         <dependency>
             <groupId>com.belita</groupId>
             <artifactId>belita-cloud-common</artifactId>
@@ -45,6 +54,10 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
 
     </dependencies>

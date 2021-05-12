@@ -1,3 +1,7 @@
+GET {{baseUrl}}{{port}}/getOrder?id=4
+Accept: application/json
+
+###
 GET {{baseUrl}}{{port}}/getInfo
 Accept: application/json
 

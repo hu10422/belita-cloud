@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dubbo-consumer-order</artifactId>
+    <artifactId>dubbo-hystrix-dashboard</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -17,31 +17,9 @@
     </properties>
 
     <dependencies>
-        <!-- devtools热部署依赖 -->
-        <!--<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            &lt;!&ndash; 防止将依赖传递到其他模块中 &ndash;&gt;
-            <optional>true</optional>
-            &lt;!&ndash; 只在运行时起作用，打包时不打进去（防止线上执行打包后的程序，启动文件监听线程File Watcher，耗费大量的内存资源） &ndash;&gt;
-            <scope>runtime</scope>
-        </dependency>-->
-        <dependency>
-            <groupId>com.belita</groupId>
-            <artifactId>belita-cloud-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.belita</groupId>
-            <artifactId>dubbo-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -59,6 +37,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+
 
     </dependencies>
 

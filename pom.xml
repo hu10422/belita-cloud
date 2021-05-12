@@ -29,6 +29,7 @@
         <module>dubbo-service</module>
         <module>dubbo-producter-order</module>
         <module>dubbo-consumer-order</module>
+        <module>dubbo-hystrix-dashboard</module>
     </modules>
 
 

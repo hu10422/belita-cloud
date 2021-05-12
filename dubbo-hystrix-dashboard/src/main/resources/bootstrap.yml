@@ -1,9 +1,9 @@
 server:
-  port: 9010
+  port: 9001
 
 spring:
   application:
-    name: dubbo-producter-order
+    name: dubbo-hystrix-dashboard
   profiles:
     active: dev
   cloud:
@@ -21,9 +21,13 @@ spring:
 # Dubbo服务配置
 dubbo:
   scan:
-    base-packages: com.belita.order.service
+    base-packages: com.belita.service
   protocol:
     name: dubbo
     port: -1
   registry:
     address: spring-cloud://nacos.io:8848
+
+
+#debug:
+#  true

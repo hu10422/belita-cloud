@@ -26,7 +26,7 @@ dubbo:
     name: dubbo
     port: -1
   registry:
-    address: spring-cloud://localhost
+    address: spring-cloud://nacos.io:8848
   cloud:
     subscribed-services: dubbo-producter-order
 
