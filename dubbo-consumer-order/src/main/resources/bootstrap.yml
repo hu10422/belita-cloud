@@ -1,0 +1,35 @@
+server:
+  port: 9020
+
+spring:
+  application:
+    name: dubbo-consumer-order
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: http://nacos.io:8848
+        namespace: ${spring.profiles.active}
+      config:
+        server-addr: http://nacos.io:8848
+        file-extension: yaml
+        namespace: ${spring.profiles.active}
+
+# Dubbo服务配置
+dubbo:
+  scan:
+    base-packages: com.belita.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://localhost
+  cloud:
+    subscribed-services: dubbo-producter-order
+
+
+#debug:
+#  true

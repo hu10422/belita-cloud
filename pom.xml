@@ -26,10 +26,9 @@
         <module>belita-cloud-service-order</module>
         <module>belita-cloud-web-api</module>
         <module>belita-cloud-gateway</module>
-        <module>dubbo-server-order</module>
-        <module>dubbo-client-order</module>
-        <module>dubbo-facade</module>
-        <module>dubbo-server</module>
+        <module>dubbo-service</module>
+        <module>dubbo-producter-order</module>
+        <module>dubbo-consumer-order</module>
     </modules>
 
 

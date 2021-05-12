@@ -1,0 +1,5 @@
+GET {{baseUrl}}{{port}}/getInfo
+Accept: application/json
+
+###
+
