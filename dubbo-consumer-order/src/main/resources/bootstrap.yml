@@ -11,10 +11,10 @@ spring:
       username: nacos
       password: nacos
       discovery:
-        server-addr: http://nacos.io:8848
+        server-addr: http://data.io:8848
         namespace: ${spring.profiles.active}
       config:
-        server-addr: http://nacos.io:8848
+        server-addr: http://data.io:8848
         file-extension: yaml
         namespace: ${spring.profiles.active}
 
@@ -26,7 +26,7 @@ dubbo:
     name: dubbo
     port: -1
   registry:
-    address: spring-cloud://nacos.io:8848
+    address: spring-cloud://data.io:8848
   cloud:
     subscribed-services: dubbo-producter-order
 
